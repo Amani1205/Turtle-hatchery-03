@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turtle Treasures | Payment</title>
+    <link rel="stylesheet" href="./tickets.css" type="text/css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="heading">
+        <a href="./hikkaduwa.html">« Home</a>
+        <h1>Buy Tickets</h1>
+    </div>
+
+    <header>
+        <input type="checkbox" id="nav_check" hidden>
+        
+        <nav class="nav">
+            <ul>
+                <li><a href="./tickets.html" >Tickets</a></li>
+                <li><a href="./details.html">Details</a></li>
+                <li><a href="./payment.html" class="active" >Payment</a></li>
+                <li><a href="./confirmation.html">Confirmation</a></li>
+                
+                
+            </ul>
+        </nav>
+        <label for="nav_check" class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label> 
+    </header>
+
+    <div class="row">
+        <div class="column left">
+            <H1>Payment Details</H1>
+            <form id="payment">
+
+                <div class="input-control">
+                    <label for="cardNum">Card Number</label><br>
+                    <input type="number" name="cardNum" id="cardNum" required>
+                    <div class="error"></div>
+                </div>
+                
+                <div class="input-control">
+                <label for="expiry">Expiry date:</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                <div class="error"></div>
+                </div>
+
+                <div class="input-control">
+                <label for="CVV"  class="label1">CVC/CVV:</label>
+                <input type="number" name="CVV" id="CVV" maxlength="3" minlength="3" required>
+                <div class="error"></div>
+                </div>
+
+
+                <div class="input-control">
+                <label for="name"  class="label1">Name on card</label><br>
+                <input type="text" name="name" id="name" required>
+                <div class="error"></div>
+                </div>
+
+
+
+                <div class="btnpay">
+                        <button id="pay" disabled>Pay<span id="payable_amount"></span></button>
+                </div>
+               
+            </form>
+        </form> 
+        </div>
+    
+        <div class="column right" >
+            <h5>Summary table</h5>
+                <table id="summary_tbl">
+                    <tr>
+                        <td class="subtop">Date</td>
+                        <td id="currentDate"></td>
+                    </tr>
+    
+                    <tr>
+                        <td class="subtop">Time</td>
+                        <td id="book_time">07.00 am - 08.00 am</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="subtop">Duration</td>
+                        <td id="book_duration">1 hrs (01 Normal : 00 Peak)</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Tickets</th>
+                        <th>Charges</th>
+                    </tr>
+    
+                    <tr>
+                        <td id="for_adult">1 Foreigner Adult</td>
+                        <td id="for_adult_ch">$10</td>
+    
+                    </tr>
+    
+                    <tr class="payable">
+                        <td class="subtop">Total Payable</td>
+                        <td id="tot_pay">$10</td>
+                    </tr>
+    
+                </table>
+    
+                
+                
+        </div>
+    </div>
+
+
+    <!--footer  -->
+<footer>
+    <div class="footer">
+        <div class="col1">
+            <h6>Useful Links</h6><br>
+            <ul>
+            <li> <a href="index.html">Home</a></li><br>
+            <li><a href="contact.html">Contact us</a></li><br>
+            <li> <a href="hikkaduwa.html">Hikkaduwa</a></li><br>
+            <li> <a href="kosgoda.html">Kosgoda</a></li><br>
+            <li> <a href="bentota.html">Bentota</a></li><br>
+        </ul>
+        </div>
+        <div class="col2">
+            <a href="./index.html">Turtle Treasures</a>
+          <div class="par">  <br><p>Our Mission:<br> Our mission is to protect and conserve<br> the turtle population by raising public awareness,<br>implementing conservation stratergies that address <br>the main threats to their survival in order to<br> ensure their survival.</p></div>
+        </div>
+        <div class="col1">
+            <h6>Follow Us on</h6><br>
+            <ul>
+                <li><a href>Instagram</a></li><br>
+                <li><a href>Facebook</a></li><br>
+                <li><a href>Twitter</a></li><br>
+                <li><a href>Youtube</a></li><br>
+            </ul>
+
+        </div>
+    </div>
+</footer>
+
+<script src="./payment.js"></script>
+<!-- <script src="./main.js"></script> -->
+
+</body>
+</html>

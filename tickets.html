@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turtle Treasures | Tickets page</title>
+    <link rel="stylesheet" href="./tickets.css" type="text/css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    
+    <link href="./dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./dist/js/select2.min.js"></script>
+
+</head>
+<body>
+    <div class="heading">
+        <a href="./hikkaduwa.html">« Home</a>
+        <h1>Buy Tickets</h1>
+    </div>
+
+    <header>
+        <input type="checkbox" id="nav_check" hidden>
+        
+        <nav class="nav">
+            <ul>
+                <li><a href="./tickets.html" class="active">Tickets</a></li>
+                <li><a href="#">Details</a></li>
+                <li><a href="#"  >Payment</a></li>
+                <li><a href="#">Confirmation</a></li>
+                
+                
+            </ul>
+        </nav>
+        <label for="nav_check" class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label> 
+    </header>
+
+
+
+
+<div class="row">
+    <div class="column left">
+        <div id="bookingForm">
+            <div class="dates">
+                <h2>Dates</h2>
+
+                <label for="date" class="label">When are you coming:</label><br>
+                <input type="date" id="date" name="date" min="">
+            </div>
+
+            <div class="guests">
+                <h3>Guests</h3>
+                        <p id="subhead">Select the number of guests:</p>
+
+
+                        <div class="category_type">
+                            <span><label for="guests_SL_ad" class="labelguest">SL Adult</label></span>
+                            <div class="ticketbtns">
+                                        <button class="minus-btn" id="minus-btn1">-</button>
+                                        <span class="ticket-count" id="SLAD">0</span>
+                                        <button class="plus-btn" id="plus-btn1">+</button>
+                            </div>
+                        </div>
+
+                        <div class="category_type">
+                            <span><label for="guests_SL_ch"  class="labelguest">SL Child</label></span>
+                            <div class="ticketbtns">
+                                        <button class="minus-btn" id="minus-btn2">-</button>
+                                        <span class="ticket-count" id="SLCC">0</span>
+                                        <button class="plus-btn" id="plus-btn2">+</button>
+                            </div>
+                        </div>
+
+                        <div class="category_type">
+                            <span><label for="guests_for_ad"  class="labelguest1">Foreigner Adult</label></span>
+                            <div class="ticketbtns">
+                                        <button class="minus-btn" id="minus-btn3">-</button>
+                                        <span class="ticket-count" id="FA">1</span>
+                                        <button class="plus-btn" id="plus-btn3">+</button>
+                            </div>
+                        </div>
+
+
+                        <div class="category_type">
+                            <span><label for="guests_for_ch"  class="labelguest1">Foreigner Child</label></span>
+                            <div class="ticketbtns">
+                                        <button class="minus-btn" id="minus-btn4">-</button>
+                                        <span class="ticket-count" id="FC">0</span>
+                                        <button class="plus-btn" id="plus-btn4">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="category_type">
+                            <span><label for="guests_inf"  class="labelguest2">Infant</label></span>
+                            <div class="ticketbtns">
+                                        <button class="minus-btn" id="minus-btn5">-</button>
+                                        <span class="ticket-count" id="INF">0</span>
+                                        <button class="plus-btn" id="plus-btn5">+</button>
+                            </div>   
+                        </div>
+
+                <div class="age">
+                    <p><em>Adult</em>:Above 15 years.</p>
+                    <p><em>Child</em>:5-15 years.</p>
+                    <p><em>Infant</em>:Below 4 years.</p>
+                </div>
+            </div>
+
+            <div class="duration">
+                <h4>Duration</h4>
+
+                <label for="time" class="label">Time</label><br>
+
+                <select name="time" id="time" multiple> 
+                    <option value="1" selected>07.00 am - 08.00 am</option>
+                    <option value="2">08.00 am - 09.00 am</option>
+                    <option value="3">09.00 am - 10.00 am</option>
+                    <option value="4">10.00 am - 11.00 am (Peak)</option>
+                    <option value="5">11.00 am - 12.00 pm(Peak)</option>
+                    <option value="6">12.00 pm - 1.00 pm(Peak)</option>
+                    <option value="7">1.00 pm - 2.00 pm</option>
+                    <option value="8">2.00 p - 3.00 pm</option>
+                    <option value="9">3.00 pm - 4.00 pm(Peak)</option>
+                    <option value="10">4.00 pm - 5.00 pm(Peak)</option>
+                    <option value="11">5.00 pm - 6.00 pm(Peak)</option>
+                    
+                </select>
+                    <div>
+                        <table class="prices">
+                            <thead>
+                                <tr>
+                                    <th>Guest</th>
+                                    <th>Charge per normal hour</th>
+                                    <th>Charge per peak hour</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Foreigner Adult</td>
+                                    <td>10 USD</td>
+                                    <td>13 USD</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Foreigner Child</td>
+                                    <td>5 USD</td>
+                                    <td>8 USD</td>
+                                </tr>
+
+                                <tr>
+                                    <td>SL Adult</td>
+                                    <td>4 USD</td>
+                                    <td>6 USD</td>
+                                </tr>
+
+                                <tr>
+                                    <td>SL Child</td>
+                                    <td>2 USD</td>
+                                    <td>3 USD</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Infant</td>
+                                    <td>Free</td>
+                                    <td>Free</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+
+
+        </div>
+
+</div>
+
+    <div class="column right">
+        <h5>Summary table</h5>
+            <table id="summary_tbl">
+                <tr>
+                    <td class="subtop">Date</td>
+                    <td id="selectedDateCell"></td>
+                </tr>
+
+                <tr>
+                    <td class="subtop">Time</td>
+                    <td id="book_time">07.00 am to 08.00 am</td>
+                </tr>
+
+                <tr>
+                    <td class="subtop">Duration</td>
+                    <td id="book_duration">1 hrs (01 Normal : 00 Peak)</td>
+                </tr>
+
+                <tr class="tick_ch">
+                    <td>Tickets</td>
+                    <td>Charges</td>
+                </tr>
+
+            
+                <tr>
+                    <td id="for_adult">1 <span>Foreigner Adult</span></td>
+                    <td id="for_adult_ch">$10</td>
+
+                </tr>
+                
+                
+                <tr class="payable">
+                    <td class="subtop">Total Payable</td>
+                    <td id="tot_pay"></td>
+                </tr>
+
+            </table>
+
+            <div class="btncont">
+                <button id="continue">Continue with purchase</button>
+            </div>
+            
+    </div>
+    
+</div>
+<!--footer  -->
+<footer>
+    <div class="footer">
+        <div class="col1">
+            <h6>Useful Links</h6><br>
+            <ul>
+            <li> <a href="index.html">Home</a></li><br>
+            <li><a href="contact.html">Contact us</a></li><br>
+            <li> <a href="hikkaduwa.html">Hikkaduwa</a></li><br>
+            <li> <a href="kosgoda.html">Kosgoda</a></li><br>
+            <li> <a href="bentota.html">Bentota</a></li><br>
+        </ul>
+        </div>
+        <div class="col2">
+            <a href="./index.html">Turtle Treasures</a>
+          <div class="par">  <br><p>Our Mission:<br> Our mission is to protect and conserve<br> the turtle population by raising public awareness,<br>implementing conservation stratergies that address <br>the main threats to their survival in order to<br> ensure their survival.</p></div>
+        </div>
+        <div class="col1">
+            <h6>Follow Us on</h6><br>
+            <ul>
+                <li><a href>Instagram</a></li><br>
+                <li><a href>Facebook</a></li><br>
+                <li><a href>Twitter</a></li><br>
+                <li><a href>Youtube</a></li><br>
+            </ul>
+
+        </div>
+    </div>
+</footer>
+<script>
+    jQuery(document).ready(function($) {
+      $('#time').select2();
+    });
+  </script>
+
+<script src="./tickets.js"></script>
+
+</body>
+</html>

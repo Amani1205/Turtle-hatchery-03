@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turtle Treasures | Details</title>
+    <link rel="stylesheet" href="./tickets.css" type="text/css">
+
+    <link href="./build/css/demo.css" rel="stylesheet">
+    <link href="./build/css/intlTelInput.css" rel="stylesheet">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+    <div class="heading">
+        <a href="./hikkaduwa.html">« Home</a>
+        <h1>Buy Tickets</h1>
+    </div>
+
+    <header>
+        <input type="checkbox" id="nav_check" hidden>
+        
+        <nav class="nav">
+            <ul>
+                <li><a href="./tickets.html" >Tickets</a></li>
+                <li><a href="./details.html" class="active">Details</a></li>
+                <li><a href="#"  >Payment</a></li>
+                <li><a href="#">Confirmation</a></li>
+                
+                
+            </ul>
+        </nav>
+        <label for="nav_check" class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label> 
+    </header>
+
+
+
+
+    <div class="row">
+        <div class="column left">
+            <h1>Enter your details </h1>
+
+            <form class="detailsform" id="detailsform">
+
+            <div class="input-control">
+                <label for="fullName">Full Name</label>
+                <p class="inst">Same as on your ID</p>
+                <input type="text" name="fullName" id="fullName" required placeholder="Please add the full name">
+                <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+                <label for="mobileNumber">Mobile number</label>
+                <p class="inst">We may reach out for booking updates here over SMS/whatsapp</p>
+                <input type="text" id="countrycode">
+                <input type="number" name="mobileNumber" id="mobileNumber" required>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+                <label for="email">Email</label>
+                <p class="inst">We'll send your tickets here</p>
+                <input type="email" name="email" id="email" required placeholder="Enter a valid email ID">
+                <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+                <label for="confirmEmail">Confirm Email</label>
+                <p class="inst">Just to ensure we've got this right</p>
+                <input type="email" name="confirmEmail" id="confirmEmail"required placeholder="Enter a valid email ID">
+                <div class="error"></div>
+            </div>
+
+            <label for="gender">Gender:</label><br>
+            <select name="gender" id="gender" size="1">
+                <option value="female">Female</option>
+                <option vlaue="male">Male</option>
+            </select>
+
+            <div class="btncont1">
+               
+                <button type="submit" id="continue1"  disabled > Continue with purchase</button>
+            </div>
+
+        </form> 
+        </div>
+    
+        <div class="column right">
+            <h5>Summary table</h5>
+                <table id="summary_tbl">
+                    <tr>
+                        <td class="subtop">Date</td>
+                        <td id="selectedDateCell"></td>
+                    </tr>
+    
+                    <tr>
+                        <td class="subtop">Time</td>
+                        <td id="book_time">07.00 am - 08.00 am</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="subtop">Duration</td>
+                        <td id="book_duration">1 hrs (01 Normal : 00 Peak)</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Tickets</th>
+                        <th>Charges</th>
+                    </tr>
+    
+                    
+                    <tr>
+                        <td id="for_adult">1 Foreigner Adult</td>
+                        <td id="for_adult_ch">$10</td>
+    
+                    </tr>
+                    
+                    
+    
+                    <tr class="payable">
+                        <td class="subtop">Total Payable</td>
+                        <td id="tot_pay"></td>
+                    </tr>
+    
+                </table>
+    
+                
+                
+        </div>
+    </div>
+
+
+    <!--footer  -->
+<footer>
+    <div class="footer">
+        <div class="col1">
+            <h6>Useful Links</h6><br>
+            <ul>
+            <li> <a href="index.html">Home</a></li><br>
+            <li><a href="contact.html">Contact us</a></li><br>
+            <li> <a href="hikkaduwa.html">Hikkaduwa</a></li><br>
+            <li> <a href="kosgoda.html">Kosgoda</a></li><br>
+            <li> <a href="bentota.html">Bentota</a></li><br>
+        </ul>
+        </div>
+        <div class="col2">
+            <a href="./index.html">Turtle Treasures</a>
+          <div class="par">  <br><p>Our Mission:<br> Our mission is to protect and conserve<br> the turtle population by raising public awareness,<br>implementing conservation stratergies that address <br>the main threats to their survival in order to<br> ensure their survival.</p></div>
+        </div>
+        <div class="col1">
+            <h6>Follow Us on</h6><br>
+            <ul>
+                <li><a href>Instagram</a></li><br>
+                <li><a href>Facebook</a></li><br>
+                <li><a href>Twitter</a></li><br>
+                <li><a href>Youtube</a></li><br>
+            </ul>
+
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="./build/js/intlTelInput.js"></script>
+
+
+<script>
+    let input=document.querySelector("#countrycode");
+    window.intlTelInput(input,{});
+</script>
+
+<script src="./details.js"></script>
+</body>
+</html>
