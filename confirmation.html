@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turtle Treasures | Confirmation</title>
+    <link rel="stylesheet" href="./tickets.css" type="text/css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="heading">
+        <a href="./hikkaduwa.html">« Home</a>
+        <h1>Buy Tickets</h1>
+    </div>
+
+    <header>
+        <input type="checkbox" id="nav_check" hidden>
+        
+        <nav class="nav">
+            <ul>
+                <li><a href="./tickets.html" >Tickets</a></li>
+                <li><a href="./details.html">Details</a></li>
+                <li><a href="./payment.html"  >Payment</a></li>
+                <li><a href="./confirmation.html" class="active">Confirmation</a></li>
+                
+                
+            </ul>
+        </nav>
+        <label for="nav_check" class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label> 
+    </header>
+
+
+    <div class="confirmtbl" >
+        <h2>Confirmation</h2>
+        <p>Thank you for your order. Your order has been confirmed with us. You can show this confirmation at the entrance.Following is the summary of your order.</p>
+        <div class="summ-cont">
+            <table class="summarytbl" id="summarytbl">
+                <tr>
+                    <td class="subtop">Visitor</td>
+                    <td id="visitorname"></td>
+                </tr>
+
+                <tr>
+                    <td class="subtop">Date</td>
+                    <td id="selectedDateCell"></td>
+                </tr>
+
+                <tr>
+                    <td class="subtop">Time</td>
+                    <td id="book_time">07.00 am - 08.00 am</td>
+                </tr>
+
+                <tr>
+                    <td class="subtop">Duration</td>
+                    <td id="book_duration">1 hrs (01 Normal : 00 Peak)</td>
+                </tr>
+
+                <tr>
+                    <td class="subtop">Mobile</td>
+                    <td id="number"></td>
+                </tr>
+                <tr>
+                    <td class="subtop">Email</td>
+                    <td id="email"></td>
+                </tr>
+                <tr>
+                    <td class="subtop">Gender</td>
+                    <td id="gender"></td>
+                </tr>
+                <tr class="tick_ch">
+                    <td>Tickets</td>
+                    <td>Charges</td>
+                </tr>
+                
+            </table>
+            
+        </div>
+            
+            
+    </div>
+    <div class="footer">
+        <p>Turtle Treasures</p>
+    </div>
+       
+<script src="./confirmation.js"></script>
+</body>
+</html>
